@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>MagaDemosite</title>
+  <meta name="description" content="テキストテキスト" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!--favicon-->
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="img/favicon_io/apple-touch-icon.png" />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="img/favicon_io/favicon-32x32.png" />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="img/favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="img/favicon_io/site.webmanifest.json" />
+  <!--CSS-->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!--script-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!--slik-->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script
+    type="text/javascript"
+    src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+  <div class="preloader">
+    <img src="./img/preload.gif" alt="preloader" />
+  </div>
+
+  <header id="home" class="mainvisual">
+    <nav id="nav">
+      <h1 class="logo">
+        <img src="img/logo.svg" alt="logo" />
+      </h1>
+      <div class="navbtn"><span></span><span></span><span></span></div>
+      <!-- link -->
+      <div id="g-nav">
+        <div class="g-nav-list">
+          <ul>
+            <li><a href="#magazine">magazine</a></li>
+            <li><a href="#fashion">fashion</a></li>
+            <li><a href="#catalog">catalog</a></li>
+            <li><a href="#question">question</a></li>
+          </ul>
+        </div>
+        <!--/.g-nav-list-->
+      </div>
+      <!--/.g-nav-->
+    </nav>
+    <!--/#nav-->
+  </header>
+  <div class="circle-bg"></div>
+  <main>
+    <section id="magazine" class="wrapper">
+      <h2 class="section-title">
+        A special, long article in a newspaper or magazine
+      </h2>
+      <p class="section-text">
+        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      </p>
+      <div class="flex-item">
+        <div class="grayscale flex-item animation">
+          <a class="magazineitem" href="#">
+            <span class="mask">
+              <img src="img/magazine-archive.webp" alt="" />
+            </span>
+            <div class="text">
+              <p class="text-title">Archive</p>
+              <p>テキストテキストテキストテキスト</p>
+              <p>テキストテキストテキスト</p>
+            </div>
+          </a>
+        </div>
+        <div class="grayscale flex-item animation">
+          <a class="magazineitem" href="#">
+            <span class="mask">
+              <img src="img/magazine-new.webp" alt="" />
+            </span>
+            <div class="text">
+              <p class="text-title">New</p>
+              <p>テキストテキストテキストテキスト</p>
+              <p>テキストテキストテキスト</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--/#magazine-->
+
+    <section id="fashion" class="fashion-bg">
+      <h2 class="section-title">Fashion & Style</h2>
+      <p>
+        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      </p>
+      <a class="btn rotateback" href="#"><span>Read More</span><span> 詳しく読む</span></a>
+      <ul class="slider">
+        <li><img src="img/person01.webp" alt="" /></li>
+        <li><img src="img/person02.webp" alt="" /></li>
+        <li><img src="img/person03.webp" alt="" /></li>
+        <li><img src="img/person04.webp" alt="" /></li>
+        <li><img src="img/person05.webp" alt="" /></li>
+        <li><img src="img/person06.webp" alt="" /></li>
+      </ul>
+    </section>
+    <!--/#fashion-->
+
+    <section id="catalog">
+      <div class="wrapper">
+        <h2 class="section-title">Catalog & Catalog</h2>
+        <p class="section-text">
+          テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        </p>
+        <ul>
+          <li class="tab tab-active tag-btn"><span>Catalog01</span></li>
+          <li class="tab tag-btn"><span>Catalog02</span></li>
+          <li class="tab tag-btn"><span>Catalog03</span></li>
+        </ul>
+        <div class="flex">
+          <img class="tab-img active" src="img/catalog01.webp" alt="" />
+          <div class="tab-text active">
+            <p>Catalog01</p>
+            <p>
+              ここにはカタログ01のテキスト内容が入ります。ここにはカタログ01のテキスト内容が入ります。ここにはカタログ01のテキスト内容が入ります。ここにはカタログ01のテキスト内容が入ります。
+            </p>
+            <a class="btn rotateback" href="#"><span>Read More</span><span>詳しく読む</span></a>
+          </div>
+          <!--/.tab-text-->
+        </div>
+        <!--/.flex-->
+
+        <div class="flex">
+          <img class="tab-img" src="img/catalog02.webp" alt="" />
+          <div class="tab-text">
+            <p>Catalog02</p>
+            <p>
+              ここにはカタログ02のテキスト内容が入ります。ここにはカタログ02のテキスト内容が入りますここにはカタログ02のテキスト内容が入りますここにはカタログ02のテキスト内容が入ります。
+            </p>
+            <a class="btn rotateback" href="#"><span>Read More</span><span>詳しく読む</span></a>
+          </div>
+          <!--/.tab-text-->
+        </div>
+        <!--/.flex-->
+
+        <div class="flex">
+          <img class="tab-img" src="img/catalog03.webp" alt="" />
+          <div class="tab-text">
+            <p>Catalog03</p>
+            <p>
+              ここにはカタログ03のテキスト内容が入ります。ここにはカタログ03のテキスト内容が入ります。ここにはカタログ03のテキスト内容が入ります。ここにはカタログ03のテキスト内容が入ります。ここにはカタログ03のテキスト内容が入ります。
+            </p>
+            <a class="btn rotateback" href="#"><span>Read More</span><span>詳しく読む</span></a>
+          </div>
+          <!--/.tab-text-->
+        </div>
+        <!--/.flex-->
+      </div>
+      <!--/.wrapper-->
+    </section>
+    <!--/.catalog-->
+
+    <section id="question" class="wrapper">
+      <h2 class="section-title">A special, newspaper and magazine Q and A</h2>
+      <p class="section-text">
+        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      </p>
+      <article class="question">
+        <div class="question-title">
+          <p>Can I exchange or return an item?</p>
+          <button type="button" class="question-btn">
+            <span class="plus-icon">
+              <img src="img/square-plus.svg" alt="" />
+            </span>
+            <span class="minus-icon">
+              <img src="img/minus.svg" alt="" />
+            </span>
+          </button>
+        </div>
+        <div class="question-text">
+          <p>
+            If you have changed your mind, we will offer a refund or exchange
+            on most items within 14 days of purchase.
+          </p>
+        </div>
+      </article>
+      <article class="question">
+        <div class="question-title">
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト?
+          </p>
+          <button type="button" class="question-btn">
+            <span class="plus-icon">
+              <img src="img/square-plus.svg" alt="" />
+            </span>
+            <span class="minus-icon">
+              <img src="img/minus.svg" alt="" />
+            </span>
+          </button>
+        </div>
+        <div class="question-text">
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+        </div>
+      </article>
+      <article class="question">
+        <div class="question-title">
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト?
+          </p>
+          <button type="button" class="question-btn">
+            <span class="plus-icon">
+              <img src="img/square-plus.svg" alt="" />
+            </span>
+            <span class="minus-icon">
+              <img src="img/minus.svg" alt="" />
+            </span>
+          </button>
+        </div>
+        <div class="question-text">
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+        </div>
+      </article>
+      <article class="question">
+        <div class="question-title">
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト?
+          </p>
+          <button type="button" class="question-btn">
+            <span class="plus-icon">
+              <img src="img/square-plus.svg" alt="" />
+            </span>
+            <span class="minus-icon">
+              <img src="img/minus.svg" alt="" />
+            </span>
+          </button>
+        </div>
+        <div class="question-text">
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+        </div>
+      </article>
+      <article class="question">
+        <div class="question-title">
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト?
+          </p>
+          <button type="button" class="question-btn">
+            <span class="plus-icon">
+              <img src="img/square-plus.svg" alt="" />
+            </span>
+            <span class="minus-icon">
+              <img src="img/minus.svg" alt="" />
+            </span>
+          </button>
+        </div>
+        <div class="question-text">
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+        </div>
+      </article>
+    </section>
+    <!--/#question-->
+
+  </main>
+  <footer id="footer">
+    <div class="flex-item wrapper">
+      <div class="item">
+        <a href="#home"><img src="img/logo.svg" alt="MagaDemosite" /></a>
+      </div>
+      <div class="item">
+        <p class="title">タイトル</p>
+        <ul>
+          <li>テキストテキストテキスト</li>
+          <li>テキストテキストテキスト</li>
+          <li>テキストテキストテキスト</li>
+          <li>テキストテキストテキスト</li>
+          <li>テキストテキストテキスト</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <p class="title">タイトルタイトルタイトル</p>
+        <p>
+          テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        </p>
+      </div>
+    </div>
+    <p class="copy">&copy; MagaDemosite</p>
+  </footer>
+  <a href="#home" class="top-link show-link">
+    <img src="img/toplink.svg" alt="linkbotton" />
+  </a>
+  <script src="script.js"></script>
+</body>
+
+</html>

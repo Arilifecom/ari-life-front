@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="これまでに手がけたウェブサイトや、練習として制作した作品を紹介します。"
+    />
+
+    <!-- OGP -->
+    <meta property="og:title" content="Project" />
+    <meta
+      property="og:description"
+      content="これまでに手がけたウェブサイトや、練習として制作した作品を紹介します。"
+    />
+    <meta
+      property="og:image"
+      content="https://ari-life.com/img/OGPthumbnail.jpg"
+    />
+    <meta property="og:url" content="https://ari-life.com/" />
+    <meta property="og:type" content="website" />
+    <title>Project</title>
+    <link rel="icon" href="img/icon.svg" type="image/svg+xml" />
+
+    <!-- フォントの読み込み-->
+    <link
+    rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    as="style"
+    onload="this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    />
+  </noscript>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="nav-center">
+        <div class="nav-header">
+          <h1 class="site-title">
+            <a href="/">
+              <img src="img/logo.svg" alt="Ari-Portfolio" />
+            </a>
+          </h1>
+          <button class="nav-toggle" aria-label="メニューボタン">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <!-- link -->
+        <div class="link-container">
+          <ul class="links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#news">News</a></li>
+            <li>
+              <a href="/#services">Services</a>
+            </li>
+            <li><a href="/#faq">Q&amp;A</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="project">
+      <div class="section-header">
+        <h2>Project</h2>
+        <p class="section-description">制作実績</p>
+      </div>
+      <div class="project-card-wrap">
+        <div class="project-card-item">
+          <div class="project-img">
+            <img src="img/project01.webp" alt="website-image" />
+          </div>
+          <div class="card-item">
+            <div class="card-header">
+              <h3>Shopify構築</h3>
+            </div>
+            <p>
+              ハンドメイド作家の友人のショッピングサイトをShopifyで制作させていただきました。作品の雰囲気と合うようにメインビジュアルの画像も商品と組み合わせ、ナチュラルなイメージにしました。
+            </p>
+            <div class="project-detail">
+              <p>キーワード</p>
+              <ul>
+                <li>Earthカラー</li>
+                <li>ナチュラル</li>
+                <li>カーキ</li>
+                <li>英語サイト</li>
+              </ul>
+              <a
+                class="btn"
+                href="https://mimijewelryart.myshopify.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >サイトを見てみる</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project-card-item">
+          <div class="project-img">
+            <img src="img/project02.webp" alt="website-image" />
+          </div>
+          <div class="card-item">
+            <div class="card-header">
+              <h3>Wordpressトップページデザイン</h3>
+            </div>
+            <p>
+              Wordpressでブログを運営している友人のトップページをデザインさせていただきました。テーマは変更せず、画像と構成を変えてホームのみを新しくシンプルに作成しました。
+            </p>
+            <div class="project-detail">
+              <p>キーワード</p>
+              <ul>
+                <li>シンプル</li>
+                <li>フレンドリー</li>
+                <li>ブルー</li>
+                <li>イラスト</li>
+              </ul>
+              <a
+                class="btn"
+                href="https://bokuhori.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >サイトを見てみる</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="practice">
+      <div class="section-header">
+        <h2>Demosite</h2>
+        <p class="section-description">制作例</p>
+      </div>
+      <div class="practice-card-wrap">
+        <div class="practice-card-item">
+          <div class="project-img">
+            <a href="/demosite/catalog-demosite/index.html" target="_blank"
+              ><img
+                src="img/demosite/catalog-demo.jpg"
+                loading="lazy"
+                alt="website-image"
+            /></a>
+          </div>
+          <div class="card-header">
+            <h3>ファッションカタログサイト</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="footer-wrap">
+        <ul class="footer-links">
+          <li><a href="/#services">サービス内容</a></li>
+          <li><a href="/#flow">制作の流れ</a></li>
+          <li><a href="#project">制作例</a></li>
+          <li><a href="/#about">制作者について</a></li>
+          <li><a href="/#faq">Q&A</a></li>
+          <li><a href="/#contact">コンタクト</a></li>
+        </ul>
+        <img
+          class="footer-logo"
+          src="img/logo.svg"
+          loading="lazy"
+          alt="saite-logo"
+        />
+      </div>
+      <p class="Copyright">Copyright &copy;ari All Rights Reserved.</p>
+    </footer>
+    <!-- JavaScrpt -->
+    <script src="/js/common.js"></script>
+  </body>
+</html>

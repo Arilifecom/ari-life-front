@@ -1,0 +1,678 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Arial, "Hiragino Sans", "Hiragino Kaku", "Gothic ProN", Meiryo,
+    "sans-serif";
+  font-size: 0.875rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+.wrapper {
+  max-width: 960px;
+  padding: 0 5%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.section-title {
+  font-size: 1.57rem;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.content-bg {
+  background-color: #efefef;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 50px;
+}
+
+/*button
+—————————————————*/
+
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  outline: none;
+}
+
+.btn span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #333;
+  /* 重なりを3Dで表示 */
+  transform-style: preserve-3d;
+  /* アニメーションの設定 数字が少なくなるほど早く回転 */
+  transition: 0.5s;
+}
+
+.rotateback span:nth-child(1) {
+  background: #fff;
+  color: #000;
+  transform: rotateX(0deg); /*はじめは回転なし*/
+  transform-origin: 0 50% -25px; /* 回転する起点 */
+}
+
+/*hoverをした後の形状*/
+.rotateback:hover span:nth-child(1) {
+  transform: rotateX(90deg); /* X軸に90度回転 */
+}
+
+/* 回転後 */
+.rotateback span:nth-child(2) {
+  background: #000;
+  color: #fff;
+  transform: rotateX(-90deg); /*はじめはX軸に-90度回転*/
+  transform-origin: 0 50% -25px; /* 回転する起点 */
+}
+
+/*hoverをした後の形状*/
+.rotateback:hover span:nth-child(2) {
+  transform: rotateX(0deg); /* X軸に0度回転 */
+}
+
+/*
+=============== 
+preloader
+===============
+*/
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #333;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s linear;
+  visibility: visible;
+  z-index: 999;
+}
+
+.hide-preloader {
+  z-index: -999;
+  visibility: hidden;
+}
+
+/*
+=============== 
+header
+===============
+*/
+
+header {
+  min-height: 100vh;
+  background-image: url("../img/mainvisual.webp");
+  background-position: top center;
+  margin-bottom: 80px;
+}
+
+.mainvisual {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#nav {
+  width: 100%;
+  background: #333;
+  padding: 20px;
+}
+
+#nav .logo {
+  line-height: 1px;
+  width: 120px;
+  margin: 0 auto;
+}
+
+#g-nav.panelactive {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/*リストのレイアウト設定*/
+#g-nav li {
+  text-align: center;
+  list-style: none;
+  font-size: 2rem;
+}
+
+#g-nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.circle-bg {
+  position: fixed;
+  z-index: 3;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #333;
+  transform: scale(0);
+  right: -50px;
+  top: -50px;
+  transition: all 0.6s;
+}
+
+/*navアクティブの設定*/
+.circleactive {
+  transform: scale(50);
+}
+
+#g-nav ul {
+  opacity: 0;
+  position: absolute;
+  z-index: 4;
+  top: 24%;
+  right: 15%;
+}
+
+#g-nav.panelactive ul {
+  opacity: 1;
+}
+
+#g-nav.panelactive ul li {
+  animation-name: gnaviAnime;
+  animation-duration: 1s;
+  animation-delay: 0.2s; /*0.2 秒遅らせて出現*/
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes gnaviAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*navbtn */
+.navbtn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999; /*ボタンを最前面に*/
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+/*×に変化*/
+.navbtn span {
+  transition: all 0.4s;
+  display: inline-block;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #dac92e;
+  width: 45%;
+  position: absolute;
+}
+
+.navbtn span:nth-of-type(1) {
+  top: 15px;
+}
+
+.navbtn span:nth-of-type(2) {
+  top: 23px;
+}
+
+.navbtn span:nth-of-type(3) {
+  top: 31px;
+}
+
+.navbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.navbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.navbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+/*#magazine
+—————————————————*/
+#magazine {
+  text-align: center;
+}
+
+#magazine .flex-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+#magazine .magazineitem {
+  position: relative;
+}
+
+#magazine .text {
+  max-width: 290px;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px 0;
+  margin: 0 auto;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+}
+
+#magazine .text-title {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.grayscale {
+  width: 48%;
+}
+
+.grayscale img {
+  filter: grayscale(100%);
+  transition: 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+.grayscale a:hover img {
+  filter: grayscale(0);
+  transform: scale(1.12);
+}
+
+.mask {
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+}
+
+/*scrollAnimation*/
+
+.animation {
+  opacity: 0;
+  visibility: hidden;
+  transition: 2s;
+  transform: translateY(20%);
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/*#fashion
+—————————————————*/
+
+#fashion {
+  height: 550px;
+  padding-top: 60px;
+}
+
+#fashion p {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.fashion-bg {
+  background-image: url(../img/fashion.webp);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+  margin-top: 30px;
+}
+
+.slider img {
+  max-width: 170px;
+}
+
+/*catalog
+—————————————————*/
+#catalog {
+  background-color: #f5f5f5;
+  padding: 60px 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.tab-img {
+  width: 48%;
+}
+
+.tab-text {
+  width: 48%;
+}
+
+.tab-text p {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.tab-text p:last-child {
+  margin-bottom: 0;
+}
+
+/*　tab
+ —————————————————*/
+#catalog ul {
+  width: 65%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 3rem;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+#catalog ul li:last-child {
+  border-right: none;
+}
+
+#catalog .tag-btn {
+  width: 100%;
+  font-size: 1.2rem;
+  border-right: #dac92e 4px solid;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.tab-active {
+  background-color: #dac92e;
+}
+
+/*　tabの表示/非表示　
+ —————————————————*/
+.tab-img,
+.tab-text {
+  display: none;
+}
+
+.active {
+  display: block;
+  animation: panel-show 0.9s ease-in-out forwards;
+}
+
+@keyframes panel-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*#question
+—————————————————*/
+
+.question {
+  text-align: left;
+  background-color: white;
+  border: #333 1px solid;
+  margin-bottom: 10px;
+  padding: 1.5rem 1.5rem 0pt 1.5rem;
+}
+
+.question-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+  letter-spacing: 0.25;
+}
+
+.question-text {
+  border-top: 1px solid rgb(158, 154, 154);
+  padding: 1rem 1.5rem 1.5rem 0;
+}
+
+/* hide text */
+.question-text {
+  display: none;
+}
+
+.minus-icon {
+  display: none;
+}
+
+/* show text */
+
+.show-text .question-text {
+  display: block;
+}
+
+.show-text .minus-icon {
+  display: inline;
+}
+
+.show-text .plus-icon {
+  display: none;
+}
+
+.question-btn {
+  width: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.question-btn:hover {
+  transform: rotate(90deg);
+}
+
+.minus-icon {
+  display: none;
+}
+
+/*footer
+—————————————————*/
+#footer {
+  background-color: #333;
+  font-size: 0.75rem;
+}
+
+#footer .flex-item {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#footer .item {
+  width: 33%;
+  line-height: 2;
+  text-align: left;
+}
+
+#footer .item:first-child {
+  padding: 60px 0;
+}
+
+#footer .item li::before {
+  content: "-";
+  margin-right: 5px;
+}
+
+#footer .title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.copy {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.top-link {
+  font-size: 0.875rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  display: grid;
+  animation: 1.2s linear 1s infinite alternate slidein;
+  width: 1rem;
+  visibility: hidden;
+  z-index: -1;
+  cursor: pointer;
+}
+
+.show-link {
+  visibility: visible;
+  z-index: 1;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(23px);
+  }
+}
+
+/*————————————————
+sp
+—————————————————*/
+@media screen and (max-width: 896px) {
+  header {
+    background-image: url("../img/mainvisualSP.webp");
+    margin-bottom: 40px;
+  }
+
+  #magazine .flex-item {
+    flex-direction: column;
+  }
+
+  #magazine .flex-item .grayscale {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #fashion {
+    margin-top: 20;
+  }
+
+  #fashion p {
+    padding: 0 20px;
+  }
+
+  /*.catalog
+—————————————————*/
+  #catalog .flex {
+    flex-direction: column;
+  }
+
+  #catalog {
+    padding: 30px 0;
+  }
+
+  #catalog ul {
+    width: 100%;
+  }
+
+  #catalog .tab-img,
+  .tab-text {
+    width: 100%;
+  }
+
+  #catalog .item:first-child {
+    margin-bottom: 60px;
+  }
+
+  #question .question-title p {
+    max-width: 80%;
+  }
+
+  /*footer
+—————————————————*/
+  #footer .item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #footer .flex-item {
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  #footer .item:first-child {
+    padding: 0;
+    text-align: center;
+  }
+}
